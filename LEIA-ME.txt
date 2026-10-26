@@ -1,0 +1,12 @@
+CHECKLIST DE CONTAS
+
+Abra index.html com dois cliques. Funciona offline, sem instalação ou banco de dados.
+
+A lista contém as 13 contas definidas. Clique no nome ou na seta para abrir e fechar o checklist. Confira Campanhas, Regras e Verba manualmente e marque as opções. No dia seguinte as marcações voltam a ficar pendentes; as observações são mantidas.
+
+O botão Editar permite ajustar ID e link da conta. Os nomes são fixos. Não há botão para adicionar contas.
+
+Dados ficam no navegador: use o mesmo navegador, perfil e caminho do arquivo. Exporte backups JSON periodicamente. Importar restaura os dados das contas que correspondem à lista atual. Galeto D’Primo e Saichi Sushi são reconhecidos como Galeto e Saichi na migração da versão anterior.
+
+Nenhuma conta é consultada automaticamente nas plataformas.
+

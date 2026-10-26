@@ -1,12 +1,10 @@
 CHECKLIST DE CONTAS
 
 Abra index.html com dois cliques. Funciona offline, sem instalação ou banco de dados.
+Clique na conta para conferir Campanhas, Regras, Verba e Mensagens. As marcações são diárias e as observações são mantidas no navegador.
 
-A lista contém as 13 contas definidas. Clique no nome ou na seta para abrir e fechar o checklist. Confira Campanhas, Regras e Verba manualmente e marque as opções. No dia seguinte as marcações voltam a ficar pendentes; as observações são mantidas.
+EXPORTAR EM PDF baixa um relatório de todas as 13 contas, independentemente da busca ou filtro. Inclui data, resumo, situação de cada item e observações. Campos vazios aparecem como Sem observações. O PDF usa fundo claro e não contém a logo da Forster.
 
-O botão Editar permite ajustar ID e link da conta. Os nomes são fixos. Não há botão para adicionar contas.
+Mantenha index.html, pdf-lib.min.js e export-pdf.js juntos na mesma pasta. Não precisa de internet para gerar o PDF.
 
-Dados ficam no navegador: use o mesmo navegador, perfil e caminho do arquivo. Exporte backups JSON periodicamente. Importar restaura os dados das contas que correspondem à lista atual. Galeto D’Primo e Saichi Sushi são reconhecidos como Galeto e Saichi na migração da versão anterior.
-
-Nenhuma conta é consultada automaticamente nas plataformas.
-
+Os dados editáveis ficam somente no armazenamento deste navegador e perfil. O PDF é um relatório para consulta, não um arquivo para restauração das marcações.

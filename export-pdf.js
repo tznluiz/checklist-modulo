@@ -14,9 +14,13 @@ async function exportPDF(){
  const addPage=()=>{const first=doc.getPageCount()===0;page=doc.addPage([595.28,841.89]);page.drawRectangle({x:0,y:0,width:595.28,height:841.89,color:paper});text('ROTINA DE TRÁFEGO  /  '+date,44,797,8,bold,accent);page.drawImage(logo,{x:507,y:768,width:44,height:45.43});if(first){text('Checklist de contas',44,751,30,serif);page.drawLine({start:{x:44,y:733},end:{x:551,y:733},thickness:.7,color:line});y=710;}else{page.drawLine({start:{x:44,y:751},end:{x:551,y:751},thickness:.7,color:line});y=721;}};
  addPage();const done=clients.filter(complete).length;text(`${clients.length} contas  |  ${done} verificadas  |  ${clients.length-done} pendentes`,44,y,10,bold);y-=20;text('Conferência manual do dia. Item não marcado = não verificado hoje.',44,y,9,regular,muted);y-=36;
  for(const [index,c] of clients.entries()){
-  if(y<250)addPage();
+  if(y<420)addPage();
   text(String(index+1).padStart(2,'0')+'  '+c.name,44,y,18,serif);y-=21;
   text(complete(c)?'TODOS OS ITENS VERIFICADOS':'CONFERÊNCIA PENDENTE',44,y,8,bold,accent);y-=26;
+  for(const row of wrap('Endereço: '+addressFor(c.name),507,9)){text(row,44,y,9,regular,muted);y-=13;}
+  y-=6;
+  for(const row of wrap('Atendimento: '+hoursFor(c.name).join(' '),507,9)){text(row,44,y,9,regular,muted);y-=13;}
+  y-=9;
   const budget=taxedBudget(c.name);
   for(const row of wrap('Após desconto de 12,5% - diária: '+budget.daily+' | Mês (30 dias): '+budget.monthly,507,9)){text(row,44,y,9,bold);y-=14;}
   y-=13;
